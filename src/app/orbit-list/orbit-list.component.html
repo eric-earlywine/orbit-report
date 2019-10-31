@@ -7,9 +7,9 @@
       <th>Orbit Type</th>
       <th>Launch Date</th>
    </tr>
-   <tr *ngFor="let source of satellites">
+   <tr *ngFor="let source of satellites; let i = index" [class.zebra]="shouldBeStripe(i)">
       <td>{{source.name}}</td>
-      <td>{{source.type}}</td>
+      <td [class.warning]="source.shouldShowWarning()">{{source.type}}</td>
       <td>{{source.operational}}</td>
       <td>{{source.orbitType}}</td>
       <td>{{source.launchDate}}</td>

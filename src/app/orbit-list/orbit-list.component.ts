@@ -22,8 +22,4 @@ export class OrbitListComponent implements OnInit {
        return 0;
     });
  }
- shouldBeStripe(num: number): boolean {
-    if (num % 2 === 0) { return true; }
-    return false;
- }
 }
